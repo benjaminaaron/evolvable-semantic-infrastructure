@@ -49,6 +49,7 @@ Additional scenarios could be, for instance:
 - `federate-and-unify`: multiple heterogeneous data sources are federated into a single emerging semantic model
 - `open-data-enrichment`: an Open Data Portal is creating mappings between tabular data to RDF at scale – it's crucial to keep a handle on the mappings by focusing on both individual correctness and a sensible overall use of external vocabularies and their respective "mental models"
 - `challenges-in-one-domain`: also just one domain can run into various challenges of semantic modeling, it might be worth fleshing that out in a scenario
+- `city-statistics`: change from yearly district snapshots of measured data (like births or air quality) to a model allowing various time spans like yearly, quarterly and up to real-time
 
 Many more scenarios and different stories within. Maybe they can be plotted in 2D or 3D to categorize them?
 
@@ -72,6 +73,16 @@ An unsorted, incomplete and under-commented list of open questions and notes:
 - Will a set of basic building blocks emerge as we see semantic infrastructure evolve in various scenarios?
 - What's the non-negotiable minimal structure that gets frozen while "everything else" can evolve? Triples?
 
+
 ## The invitation
 
-If you remember modeling changes that you ran into in your work, please consider sharing them! I would like to collect a variety of scenarios and stories to illuminate the problem space a bit wider. Anything is interesting to me. Write me an [email](mailto:benjamin.degenhart@foerderfunke.org), make a PR here, open an issue or let's set up a call!
+If you remember modeling challenges that you ran into in your work, please consider sharing them! I would like to collect a variety of scenarios and stories to illuminate the problem space a bit wider. Write me an [email](mailto:benjamin.degenhart@foerderfunke.org), make a PR here, open an issue or let's set up a call!
+
+Anything is interesting to me. Some types of challenges from the top of my head:
+
+- Temporal granularity: e.g., having to change from a yearly measurement to a quarterly one
+- Geographic boundary changes: e.g., districts get redrawn or postal codes change
+- Unit or currency transitions
+- Entity identities change: e.g., an organization gets renamed, merges or gets split up
+- Expanding or shrinking categorization
+- ... ?
