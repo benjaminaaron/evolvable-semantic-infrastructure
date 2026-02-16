@@ -2,6 +2,7 @@
 
 This repository is a practical prototyping playground for what "evolvable semantic infrastructure" could look like. The exploration revolves around three interconnected topics: shared vocabulary development, decoupling processing logic and sliding level of details.
 
+
 ### Shared vocabulary development
 In various scenarios it would be beneficial to share common vocabulary across multiple domains. Rather than mainly designing this initially and then patching it up along the way, we want to explore what a truly dynamic vocabulary development process could look like. One that avoids path dependencies and workarounds and embraces "breaking changes" as the cost for working towards the most salient, compact and elegant map of any territory.
 
@@ -17,6 +18,7 @@ If both the vocabulary and the processing logic operate on the same semantic mod
 ### Sliding level of details
 
 Depending on the scenario, there is a degree of granularity that can be chosen in the way vocabulary terms are modeled. In the Law-as-Code domain, for instance, one might think of this as a sliding level of detail: is the person an adult or not / what is their age / when is their birthday. What does a modeling approach look like that allows the (automatic) sliding along such levels of details, based on an appropriate calibration level in a given context?
+
 
 ### Possibly relevant fields to look into
 
@@ -47,7 +49,8 @@ Additional scenarios could be, for instance:
 - `federate-and-unify`: multiple heterogeneous data sources are federated into a single emerging semantic model
 - `open-data-enrichment`: an Open Data Portal is creating mappings between tabular data to RDF at scale – it's crucial to keep a handle on the mappings by focusing on both individual correctness and a sensible overall use of external vocabularies and their respective "mental models"
 - `challenges-in-one-domain`: also just one domain can run into various challenges of semantic modeling, it might be worth fleshing that out in a scenario
-- Many more scenarios, and different stories within, would be great to illuminate this whole space. Maybe they can be plotted in 2D or 3D to categorize them?
+
+Many more scenarios and different stories within. Maybe they can be plotted in 2D or 3D to categorize them?
 
 
 ## Open questions and notes
@@ -68,3 +71,7 @@ An unsorted, incomplete and under-commented list of open questions and notes:
 - Vocabulary reuse: cherry-pick single terms vs. getting pulled into that mental model and reusing more because it makes sense
 - Will a set of basic building blocks emerge as we see semantic infrastructure evolve in various scenarios?
 - What's the non-negotiable minimal structure that gets frozen while "everything else" can evolve? Triples?
+
+## The invitation
+
+If you remember modeling changes that you ran into in your work, please consider sharing them! I would like to collect a variety of scenarios and stories to illuminate the problem space a bit wider. Anything is interesting to me. Write me an [email](mailto:benjamin.degenhart@foerderfunke.org), make a PR here, open an issue or let's set up a call!
