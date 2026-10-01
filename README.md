@@ -54,6 +54,13 @@ Additional scenarios could be, for instance:
 Many more scenarios and different stories within. Maybe they can be plotted in 2D or 3D to categorize them?
 
 
+## Tooling
+
+Tooling explores concepts and implementations of mechanisms that could support several scenarios.
+
+- [Vocabulary Evolution Buffer](tooling/vocabulary-evolution-buffer/README.md): adapt queries as getters while the vocabulary evolves, preserving an application's result contract. SPARQL SELECT serves as a worked example, including limits and a notification workflow.
+
+
 ## Open questions and notes
 
 An unsorted, incomplete and under-commented list of open questions and notes:
