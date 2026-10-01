@@ -8,7 +8,7 @@ Prefixes used throughout:
 ```turtle
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <https://evo-sem-inf.org/default#> .
+@prefix : <https://example.org/default#> .
 ```
 
 ---

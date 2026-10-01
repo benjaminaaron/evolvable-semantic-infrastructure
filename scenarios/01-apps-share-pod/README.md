@@ -10,7 +10,7 @@ The first app is a library that uses the citizen pod to store personal data like
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix schema: <http://schema.org/> .
-@prefix : <https://evo-sem-inf.org/default#> .
+@prefix : <https://example.org/default#> .
 
 :user a schema:Person ;
     foaf:name "Martina Musterfrau" ;
@@ -41,7 +41,7 @@ The second app joining the ecosystem is the service finder of the city where cit
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <https://evo-sem-inf.org/default#> .
+@prefix : <https://example.org/default#> .
 
 :user a schema:Person ;
     foaf:firstName "Martina" ;
@@ -68,7 +68,7 @@ The third app is the Lifelong Learning Centre of the city (Volkshochschule) wher
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix schema: <http://schema.org/> .
-@prefix : <https://evo-sem-inf.org/default#> .
+@prefix : <https://example.org/default#> .
 
 :user a schema:Person ;
     :hasSkill :enLangSkill , :deLangSkill , :gardeningSkill ;
