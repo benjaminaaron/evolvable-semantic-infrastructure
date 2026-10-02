@@ -2,7 +2,7 @@
 
 *Adapting queries as getters so applications can migrate at their own pace.*
 
-Can queries (e.g. SPARQL SELECT) acting as getters buffer an application's internal model from otherwise breaking changes in an evolving knowledge graph? The idea is to adapt how data is retrieved while preserving the structure and meaning the application expects.
+The core idea is **query = getter = buffer**: adapting queries (e.g. SPARQL SELECT) can shield an application's internal model from otherwise breaking changes in an evolving knowledge graph, preserving the structure and meaning the application expects.
 
 This worked example extends [Apps share a Pod](../../scenarios/01-apps-share-pod/README.md). The library app uses hobbies to recommend books. Its application logic expects a table with columns `?user` (IRI) and `?hobby` (string literal), with one row per user/hobby pair. The graph can change while this contract stays stable, provided the query can still recover the same information and meaning.
 
@@ -85,7 +85,7 @@ Automatic adaptation must stop here: the app needs hobby information restored, o
 
 ## Announcing changes
 
-Before applying Change 2, a migration service could notify affected applications like this (using an illustrative vocabulary):
+The KG host has no access to applications' queries or internal logic, but could publish structured change notices a few days before they take effect. For Change 2, a notice could look like this (using an illustrative vocabulary):
 
 ```turtle
 @prefix : <https://example.org/default#> .
@@ -98,9 +98,9 @@ Before applying Change 2, a migration service could notify affected applications
     :compatibility "Preserves hobby strings if each user/hobby name has one node." .
 ```
 
-The migration service's implementation and communication channels would still need to be defined—for example, an SDK integration, webhooks or a polling endpoint. Query adaptations would be checked, approved when needed and activated alongside the graph change, with the old state available during transition.
+Notices could include transformers that run on the application side and propose query edits—for Change 1, “replace `:hasHobby` with `:hobby`.” Developers could accept an edit with one click, or opt into automatic adoption of simple, meaning-preserving changes. Adapted queries would take effect with the matching graph change.
 
-[LDES](https://w3id.org/ldes/specification) could be used to publish these notifications as a linked data event stream.
+Without queries that such transformers can adapt, the notice still provides advance warning: “Update how your application retrieves this data before the change takes effect.” The migration service and delivery channels remain to be defined; SDKs could receive notices automatically, and [LDES](https://w3id.org/ldes/specification) could publish them as a linked data event stream.
 
 ## Limits
 
